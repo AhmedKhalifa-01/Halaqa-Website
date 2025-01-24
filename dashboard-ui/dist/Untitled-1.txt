@@ -1,0 +1,23 @@
+<form class="login-form" action="login.php" method="post">
+								<input type="text" placeholder="اسم الطالب" name="name"/>
+								<input type="text" placeholder="المرحلة الدراسية" name="lvl"/>
+								<input type="text" placeholder="الجنسية" name="nat"/>
+								<input type="text" placeholder="رقم الهوية" name="id"/>
+								<input type="date" placeholder="تاريخ الميلاد" name="bd"/>
+								<input type="text" placeholder="مكان الميلاد" name="bloc"/>
+								<input type="date" placeholder="تاريخ الالتحاق بالمجمع" name="enrolldate"/>
+								<input type="text" placeholder="رقم الجوال" name="phone"/>
+								<input type="text" placeholder="جوال ولي الأمر" name="p_phone"/>
+								<input type="text" placeholder="قرابة ولي الأمر" name="p_relation"/>
+								<input type="text" placeholder="آخر سورة يحفظها" name="last_sorah"/>
+								<input type="text" placeholder="الأجزاء التي تم اختبارها" name="tested"/>
+								<p style="color:red;font-size: 12px;width: 100%;">قم باستعمال الفاصلة للفصل بين الأجزاء مثال : 1,2,14,25</p>
+								<input type="file" placeholder="الصورة الشخصية" name="file"/>
+								<input type="text" placeholder="الدورات التي حصل عليها" name="course_optained"/>
+								<p style="color:red;font-size: 12px;width: 100%;">قم باستعمال الفاصلة للفصل بين الدورات مثال : 1,2,14,25</p>
+								<input type="text" placeholder="المتون التي حفظها" name="mton_otained"/>
+								<p style="color:red;font-size: 12px;width: 100%;">قم باستعمال الفاصلة للفصل بين المتون مثال : 1,2,14,25</p>
+								<input type="text" placeholder="الإيميل" name="email"/>
+								<input type="password" placeholder="كلمة المرور" name="pass"/>
+								<button type="submit" name="add_std">إضافة</button>
+							  </form>
