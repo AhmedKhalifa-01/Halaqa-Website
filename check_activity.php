@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('includes/connection.php');
+    include('../../includes/connection.php');
 
     $sessionId = session_id();
     date_default_timezone_set('Asia/Riyadh');
