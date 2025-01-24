@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number Selector</title>
+  </head>
+  <body>
+    <h1>Select a number:</h1>
+    <div class="faces">
+        <div id="numberSelectorContainer">
+            <select id="numberSelector" onchange="showOptions()">
+              <option value="">-- Please select a number --</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <div id="numberSelection"></div>
+          </div>
+          <div id="optionsContainer" style="display:none">
+            <label for="quarterHalfSelector">Select a quarter or half:</label>
+            <select id="quarterHalfSelector" onchange="showSelection()">
+              <option value="">-- Please select an option --</option>
+              <option value="quarter">Quarter</option>
+              <option value="half">Half</option>
+            </select>
+            <div id="quarterHalfSelection"></div>
+          </div>
+          <script>
+            function showOptions() {
+              const numberSelector = document.getElementById("numberSelector");
+              const selectedNumber = numberSelector.value;
+              const numberSelectorContainer = document.getElementById("numberSelectorContainer");
+              const optionsContainer = document.getElementById("optionsContainer");
+              const quarterHalfSelector = document.getElementById("quarterHalfSelector");
+              const numberSelection = document.getElementById("numberSelection");
+              if (selectedNumber) {
+                numberSelection.innerHTML = `You have selected number ${selectedNumber}`;
+                numberSelectorContainer.style.display = "none";
+                optionsContainer.style.display = "block";
+              } else {
+                numberSelection.innerHTML = "";
+                numberSelectorContainer.style.display = "block";
+                optionsContainer.style.display = "none";
+              }
+            }
+            function showSelection() {
+              const quarterHalfSelector = document.getElementById("quarterHalfSelector");
+              const selectedQuarterHalf = quarterHalfSelector.value;
+              const quarterHalfSelection = document.getElementById("quarterHalfSelection");
+              const numberSelection = document.getElementById("numberSelection");
+              const selectedNumber = document.getElementById("numberSelector").value;
+              if (selectedQuarterHalf) {
+                quarterHalfSelection.innerHTML = `You have selected ${selectedQuarterHalf}`;
+                numberSelection.innerHTML = `You have selected number ${selectedNumber} and ${selectedQuarterHalf}`;
+                quarterHalfSelector.selectedIndex = 0;
+                document.getElementById("optionsContainer").style.display = "none";
+                document.getElementById("numberSelectorContainer").style.display = "block";
+              } else {
+                quarterHalfSelection.innerHTML = "";
+              }
+            }
+        </script>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+<script>
+    function showOptions() {
+        const numberSelector = document.getElementById("numberSelector");
+        const selectedNumber = numberSelector.value;
+        const numberSelectorContainer = document.getElementById("numberSelectorContainer");
+        const optionsContainer = document.getElementById("optionsContainer");
+        const quarterHalfSelector = document.getElementById("quarterHalfSelector");
+        const numberSelection = document.getElementById("numberSelection");
+        if (selectedNumber) {
+            //numberSelection.innerHTML = `You have selected number ${selectedNumber}`;
+            numberSelectorContainer.style.display = "none";
+            optionsContainer.style.display = "contents";
+        } else {
+            numberSelection.innerHTML = "";
+            numberSelectorContainer.style.display = "contents";
+            optionsContainer.style.display = "none";
+        }
+    }
+    function showSelection() {
+        const quarterHalfSelector = document.getElementById("quarterHalfSelector");
+        const selectedQuarterHalf = quarterHalfSelector.value;
+        const quarterHalfSelection = document.getElementById("quarterHalfSelection");
+        const numberSelection = document.getElementById("numberSelection");
+        const selectedNumber = document.getElementById("numberSelector").value;
+        if (selectedQuarterHalf) {
+            //quarterHalfSelection.innerHTML = `You have selected ${selectedQuarterHalf}`;
+            numberSelection.innerHTML = `عدد الأوجه : ${selectedNumber} و ${selectedQuarterHalf}`;
+            
+            document.getElementById("optionsContainer").style.display = "none";
+            document.getElementById("numberSelectorContainer").style.display = "contents";
+        } else {
+            quarterHalfSelection.innerHTML = "";
+        }
+    }
+</script>
+
+
+
+
